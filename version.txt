@@ -1,0 +1,5 @@
+#VERSÃO: 1.0;
+#APP: AvaliacaoTaticaSolution;
+#DATABASE: Oracle.12C;
+#FRAMEWORK: VisualStudio.2015;
+#BY: RodolfoTerra

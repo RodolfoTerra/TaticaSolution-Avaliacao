@@ -91,10 +91,35 @@
             a:hover {
                 text-decoration: underline;
             }
+
+        /* Preloader */
+        #preloader  {
+	        position: fixed;
+	        top: 0;
+	        left: 0;
+	        right: 0;
+	        bottom: 0;
+	        background-color: #fefefe;
+	        z-index: 999;
+	        height: 100%;
+	        width: 100%;
+        }
+
+        #status  {
+	        position: fixed;
+	        height: 100%;
+	        width: 100%;
+	        background: #FFF url('Content/images/bx_loader.gif');
+	        background-repeat: no-repeat;
+	        background-position: center;
+	        z-index: 999;
+        }
     </style>
 </head>
 <body>
-
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
     <div id="header">
         <h1>Prova Tática Solution</h1>
         <p>Candidato: RODOLFO TERRA</p>
@@ -122,10 +147,66 @@
         </div>
 
         <div class="section">
-            <h2><a href="/">INICIAR AVALIAÇÃO</a></h2>
+            <h2><a href="/" onclick="Preloader();">INICIAR AVALIAÇÃO</a></h2>
         </div>
 
     </div>
+    <script>
+        /* Início função fade*/
+        function fadeOut(id, time) {
+            fade(id, time, 100, 0);
+        }
+
+        function fadeIn(id, time) {
+            fade(id, time, 0, 100);
+        }
+
+        function fade(id, time, ini, fin) {
+            var target = document.getElementById(id);
+            var alpha = ini;
+            var inc;
+            if (fin >= ini) {
+                inc = 2;
+            } else {
+                inc = -2;
+            }
+            timer = (time * 1000) / 50;
+            var i = setInterval(
+                function () {
+                    if ((inc > 0 && alpha >= fin) || (inc < 0 && alpha <= fin)) {
+                        clearInterval(i);
+                    }
+                    setAlpha(target, alpha);
+                    alpha += inc;
+
+                    if (alpha === 0) {
+                        document.getElementById("status").style.display = "none";
+                        document.getElementById("preloader").style.display = "none";
+                    }
+                }, timer);
+
+        }
+
+        function setAlpha(target, alpha) {
+            target.style.filter = "alpha(opacity=" + alpha + ")";
+            target.style.opacity = alpha / 100;
+
+        }
+
+        /* Fim função fade */
+
+        window.onload = function () {
+            fadeOut("status", 0.6);
+            fadeOut("preloader", 0.6);
+        }
+
+        function Preloader() {
+            fadeIn("status", 0.6);
+            fadeIn("preloader", 0.6);
+            document.getElementById("status").style.display = "block";
+            document.getElementById("preloader").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>

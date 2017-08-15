@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Perguntas e Tarefas";
+}
+<h2>@ViewBag.Title.</h2>
+<p>@ViewBag.Pergunta.</p>
+
+<div class="col-md-12">
+    <div>
+        <button type="button" class="btn btn-primary col-md-12" data-toggle="collapse" data-target="#1">
+            1. Como os padrões MVP, MVC e MVVM se relacionam? Quando são apropriados?
+        </button>
+        <div id="1" class="collapse">
+            <strong>R:</strong> São padrões que descrevem uma abordagem para desenvolvimento onde MV* (Model e View)  estão presentes nos 3 padrões sendo Model responsável por dados e comportamento e View pela apresentação, relacionando dessa forma os 3 padrões que tem aplicações distintas com base na plataforma utilizada, sendo MVC (Controller) -> para linguagens de servidor, ASP.Net, PHP, etc; MVP (Presenter) -> SharePoint; MVVM (ViewModel) -> WPF.
+        </div>
+    </div>
+    
+    <br />
+
+    <div>
+        <button type="button" class="btn btn-info col-md-12" data-toggle="collapse" data-target="#2">
+            2. Dado tempo, custo, satisfação do cliente e melhores práticas, como você irá priorizá-los para um projeto no qual você está trabalhando? Explique o porquê.
+        </button>
+        <div id="2" class="collapse">
+            <strong>R:</strong> A satisfação do cliente sempre vem em primeiro lugar, boas práticas são fundamentais para essa satisfação, pois irão garantir a qualidade do produto final, a padronização dessas práticas irão diminuir retrabalhos minimizando o tempo que nessa área é relativo ao custo.
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        <button type="button" class="btn btn-primary col-md-12" data-toggle="collapse" data-target="#3">
+            3. Nomeie três atributos principais do design orientado a objetos. Descreva o que eles significam e por que eles são importantes.
+        </button>
+        <div id="3" class="collapse">
+            <strong>R:</strong> Os atributos principais da orientação a objetos são, Classes, Objetos e Métodos, onde com as Classes são projetos de objetos com características e comportamentos, elas permitem armazenar propriedades e métodos; Objetos são características definidas por uma classe à partir do momento que é instanciado esse objeto (criado).
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        <button type="button" class="btn btn-info col-md-12" data-toggle="collapse" data-target="#4">
+            4. Qual a diferença entre o Locking and Lockless (Optimistic and Pessimistic)? 
+        </button>
+        <div id="4" class="collapse">
+            <strong>R:</strong> Locking representa um algoritmo que em algum momento irá depender da execução e resposta de outro algoritmo para continuar a trabalhar, Lockless representa um algoritmo sem bloqueio de execução, esse em nenhum momento depende ao aguarda retorno de outro para seu término.
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        <button type="button" class="btn btn-primary col-md-12" data-toggle="collapse" data-target="#5">
+            5. Qual a diferença entre asynchrony and concurrency?
+        </button>
+        <div id="5" class="collapse">
+            <strong>R:</strong> Em um modelo concorrente existe uma ordem cronológica de leitura e interpretação do código, existindo dependências de execução onde uma função necessariamente não é realizada até o término de outra, já em um ambiente assíncrono essas execuções não são independentes de outras, pois são gerenciadas por um sistema interno de identificação e controle.
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        <button type="button" class="btn btn-info col-md-12" data-toggle="collapse" data-target="#6">
+            6. Descreva-me um código ruim que você leu ou herdou ultimamente.
+        </button>
+        <div id="6" class="collapse">
+            <strong>R:</strong> Já peguei vários tipos de códigos ruins, desde códigos sem endentação a ausência de normas padrões da linguagem que foi escrito, passando por variáveis sem uso, mal escritas, sem padrão ou extremamente abreviadas.
+        </div>
+    </div>
+
+    <br />
+
+</div>
+
+<hr />
+
+<p>@ViewBag.Tarefa.</p>
+
+<div class="col-md-12">
+    <div>
+        <button type="button" class="btn btn-success col-md-12" data-toggle="collapse" data-target="#7">
+            7. Crie uma página web, que liste os cursos em um datatable. 
+        </button>
+        <div id="7" class="">
+            <span class="fa fa-check-square-o" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        <button type="button" class="btn btn-success col-md-12" data-toggle="collapse" data-target="#8">
+            8. Crie uma página web, que liste os alunos em um datatable.
+        </button>
+        <div id="8" class="">
+            <span class="fa fa-check-square-o" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        <button type="button" class="btn btn-success col-md-12" data-toggle="collapse" data-target="#9">
+            9. Gere a figura abaixo formada pelos caracteres ”: e #”.
+        </button>
+        <div id="9" class="">
+            <span class="fa fa-check-square-o" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <br />
+
+</div>

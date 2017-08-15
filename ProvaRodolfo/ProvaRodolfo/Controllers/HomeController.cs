@@ -26,5 +26,13 @@ namespace ProvaRodolfo.Controllers
 
             return View();
         }
+
+        public ActionResult Perguntas()
+        {
+            ViewBag.Pergunta = "Lista de perguntas respondidas";
+            ViewBag.Tarefa = "Lista de tarefas realizadas";
+
+            return View();
+        }
     }
 }

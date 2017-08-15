@@ -15,14 +15,14 @@ namespace ProvaRodolfo.Controllers
 
         public ActionResult Sobre()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Rodolfo Terra";
 
             return View();
         }
 
         public ActionResult Contato()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Rodolfo Terra";
 
             return View();
         }

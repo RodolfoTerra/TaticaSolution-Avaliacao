@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Avaliação Tática Solutions</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Roroldo Terra", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Cursos", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Alunos", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
+                    <li>@Html.ActionLink("Contato", "Contato", "Home")</li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 footerleft ">
+                    <div class="logofooter"> Rodolfo Terra</div>
+                    <p>Trabalho com desenvolvimento de sistemas SIG/SAD em plataformas locais e online, tendo experiência em várias etapas do processo como análise de necessidade arquitetura de sistemas, modelagem de dados, testes, implantação e implementações de melhorias.</p>
+                    <p><i class="fa fa-map-pin"></i>Brasil - São Paulo/SP</p>
+                    <p><i class="fa fa-phone"></i> +55(11)95982-1618</p>
+                    <p><i class="fa fa-envelope"></i> <a href="mailto:rodolfodesignpro@yahoo.com.br" target="_blank">rodolfodesignpro@yahoo.com.br</a></p>
+
+                </div>
+                <div class="col-md-2 col-sm-6 paddingtop-bottom">
+                    <h6 class="heading7">GENERAL LINKS</h6>
+                    <ul class="footer-ul">
+                        <li><a href="#"> Career</a></li>
+                        <li><a href="#"> Privacy Policy</a></li>
+                        <li><a href="#"> Terms & Conditions</a></li>
+                        <li><a href="#"> Client Gateway</a></li>
+                        <li><a href="#"> Ranking</a></li>
+                        <li><a href="#"> Case Studies</a></li>
+                        <li><a href="#"> Frequently Ask Questions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                    <h6 class="heading7">LATEST POST</h6>
+                    <div class="post">
+                        <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                        <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                        <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer start from here-->
+    <div class="copyright">
+        <div class="container">
+            <div class="col-md-6">
+                <p>© 2017 - Avaliação <a href="http://www.taticasolutions.com.br/" target="_blank">Tática Solutions</a></p>
+            </div>
+            <div class="col-md-6">
+                <ul class="bottom_ul">
+                    <li><a href="#">webenlance.com</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Faq's</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

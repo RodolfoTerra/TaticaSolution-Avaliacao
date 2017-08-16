@@ -62,3 +62,11 @@ D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\System.Net.Http.Fo
 D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\System.Web.Http.xml
 D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\System.Web.Http.WebHost.xml
 D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\obj\Debug\ProvaRodolfo.csprojResolveAssemblyReference.cache
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\EntityModel.Context.tt
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\EntityModel.tt
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\EntityModel.edmx.diagram
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\EntityModel.Context.cs
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\EntityModel.cs
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\EntityModel.Designer.cs
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\TBL_ALUNO.cs
+D:\xampp\htdocs\TaticaSolutions\ProvaRodolfo\ProvaRodolfo\bin\Models\TBL_CURSO.cs

@@ -1,0 +1,32 @@
+﻿@model ProvaRodolfo.Models.TBL_CURSO
+
+@{
+    ViewBag.Title = "Cursos";
+}
+
+<h2>Excuir</h2>
+
+<h3>Tem certeza que deseja excluir?</h3>
+<div>
+    <h4>CURSO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CURSO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CURSO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

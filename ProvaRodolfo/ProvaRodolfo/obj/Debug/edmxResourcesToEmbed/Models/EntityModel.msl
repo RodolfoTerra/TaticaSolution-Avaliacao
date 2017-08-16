@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdtaticaModelStoreContainer" CdmEntityContainer="bdtaticaEntities">
+    <EntitySetMapping Name="TBL_ALUNO">
+      <EntityTypeMapping TypeName="bdtaticaModel.TBL_ALUNO">
+        <MappingFragment StoreEntitySet="TBL_ALUNO">
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="CURSO_ID" ColumnName="CURSO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_CURSO">
+      <EntityTypeMapping TypeName="bdtaticaModel.TBL_CURSO">
+        <MappingFragment StoreEntitySet="TBL_CURSO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CURSO" ColumnName="NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

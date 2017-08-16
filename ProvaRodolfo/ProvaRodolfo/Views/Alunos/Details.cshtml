@@ -1,0 +1,42 @@
+﻿@model ProvaRodolfo.Models.TBL_ALUNO
+
+@{
+    ViewBag.Title = "Alunos";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>ALUNO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBL_CURSO.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBL_CURSO.NOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.MATRICULA }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

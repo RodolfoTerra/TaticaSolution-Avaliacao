@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdtaticaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBL_ALUNO">
+    <Key>
+      <PropertyRef Name="MATRICULA" />
+    </Key>
+    <Property Name="CPF" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="MATRICULA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURSO_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TBL_CURSO" Relationship="Self.FK_TBL_ALUNO_TBL_CURSO" FromRole="TBL_ALUNO" ToRole="TBL_CURSO" />
+  </EntityType>
+  <EntityType Name="TBL_CURSO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CURSO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TBL_ALUNO" Relationship="Self.FK_TBL_ALUNO_TBL_CURSO" FromRole="TBL_CURSO" ToRole="TBL_ALUNO" />
+  </EntityType>
+  <Association Name="FK_TBL_ALUNO_TBL_CURSO">
+    <End Role="TBL_CURSO" Type="Self.TBL_CURSO" Multiplicity="1" />
+    <End Role="TBL_ALUNO" Type="Self.TBL_ALUNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_CURSO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBL_ALUNO">
+        <PropertyRef Name="CURSO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdtaticaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_ALUNO" EntityType="Self.TBL_ALUNO" />
+    <EntitySet Name="TBL_CURSO" EntityType="Self.TBL_CURSO" />
+    <AssociationSet Name="FK_TBL_ALUNO_TBL_CURSO" Association="Self.FK_TBL_ALUNO_TBL_CURSO">
+      <End Role="TBL_CURSO" EntitySet="TBL_CURSO" />
+      <End Role="TBL_ALUNO" EntitySet="TBL_ALUNO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

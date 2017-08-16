@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelProva" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBL_ALUNO">
+    <Key>
+      <PropertyRef Name="CPF" />
+      <PropertyRef Name="MATRICULA" />
+      <PropertyRef Name="NOME" />
+      <PropertyRef Name="CURSO_ID" />
+    </Key>
+    <Property Name="CPF" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MATRICULA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURSO_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_CURSO">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="NOME" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_ALUNO" EntityType="Self.TBL_ALUNO" />
+    <EntitySet Name="TBL_CURSO" EntityType="Self.TBL_CURSO" />
+  </EntityContainer>
+</Schema>

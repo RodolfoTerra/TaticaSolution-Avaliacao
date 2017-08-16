@@ -1,0 +1,26 @@
+﻿@model ProvaRodolfo.Models.TBL_CURSO
+
+@{
+    ViewBag.Title = "Cursos";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>CURSO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CURSO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CURSO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

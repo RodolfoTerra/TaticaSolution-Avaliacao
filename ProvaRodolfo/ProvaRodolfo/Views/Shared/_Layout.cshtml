@@ -25,16 +25,16 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Cursos", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Alunos", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Cursos", "Index", "Cursos")</li>
+                    <li>@Html.ActionLink("Alunos", "Index", "Alunos")</li>
                     <li>@Html.ActionLink("Perguntas", "Perguntas", "Home")</li>
-                    <li>@Html.ActionLink("Documentação", "Documentos", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contato", "Home")</li>
                 </ul>
             </div>
             
         </div>
     </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -54,13 +54,11 @@
                 <div class="col-md-2 col-sm-6 paddingtop-bottom">
                     <h6 class="heading7">LINKS</h6>
                     <ul class="footer-ul">
-                        <li><a href="#"> Início</a></li>
-                        <li><a href="#"> Cursos</a></li>
-                        <li><a href="#"> Alunos</a></li>
-                        <li><a href="#"> Perguntas</a></li>
-                        <li><a href="#"> Sobre</a></li>
-                        <li><a href="#"> Documentação</a></li>
-                        <li><a href="#"> Contato</a></li>
+                        <li><a href="/"> Início</a></li>
+                        <li><a href="/Cursos"> Cursos</a></li>
+                        <li><a href="/Alunos"> Alunos</a></li>
+                        <li><a href="/Home/Perguntas"> Perguntas</a></li>
+                        <li><a href="/Home/Contato"> Contato</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 paddingtop-bottom">

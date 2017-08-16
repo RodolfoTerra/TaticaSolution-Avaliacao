@@ -18,6 +18,19 @@ namespace ProvaRodolfo
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Cursos",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Cursos", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Alunos",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Alunos", action = "Index", id = UrlParameter.Optional }
+            );
+
         }
     }
 }

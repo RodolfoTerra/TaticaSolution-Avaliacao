@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ProvaRodolfo.Models.TBL_ALUNO>
+
+@{
+    ViewBag.Title = "Alunos";
+}
+
+<h2>Alunos</h2>
+
+<p>
+    @Html.ActionLink("NOVO", "Create")
+</p>
+
+<p>
+    @("Pesquisar aluno")
+    @using (Html.BeginForm("Index", "Alunos", FormMethod.Post))
+    {
+        @Html.TextBox("Pesquisa")
+        <input type="submit" value="Pesquisar" />
+    }
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME)
+        </th>
+        <th>
+            CURSO
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBL_CURSO.CURSO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.MATRICULA }) |
+            @Html.ActionLink("Ver", "Details", new { id=item.MATRICULA }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.MATRICULA })
+        </td>
+    </tr>
+}
+
+</table>

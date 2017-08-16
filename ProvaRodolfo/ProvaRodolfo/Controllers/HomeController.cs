@@ -13,13 +13,6 @@ namespace ProvaRodolfo.Controllers
             return View();
         }
 
-        public ActionResult Documentos()
-        {
-            ViewBag.Message = "Rodolfo Terra";
-
-            return View();
-        }
-
         public ActionResult Contato()
         {
             ViewBag.Message = "Rodolfo Terra";

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelProva.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANONYMOUS.TBL_ALUNO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBL_ALUNO">
+    <Key>
+      <PropertyRef Name="CPF" />
+      <PropertyRef Name="MATRICULA" />
+      <PropertyRef Name="NOME" />
+      <PropertyRef Name="CURSO_ID" />
+    </Key>
+    <Property Name="CPF" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MATRICULA" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="NOME" Type="varchar2" MaxLength="60" Nullable="false" />
+    <Property Name="CURSO_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANONYMOUS.TBL_CURSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBL_CURSO">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="NOME" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME" Type="varchar2" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ModelProvaStoreContainer">
+    <EntitySet Name="TBL_ALUNO" EntityType="Self.TBL_ALUNO" store:Type="Tables" store:Schema="ANONYMOUS">
+      <DefiningQuery>SELECT 
+"TBL_ALUNO"."CPF" AS "CPF", 
+"TBL_ALUNO"."MATRICULA" AS "MATRICULA", 
+"TBL_ALUNO"."NOME" AS "NOME", 
+"TBL_ALUNO"."CURSO_ID" AS "CURSO_ID"
+FROM "ANONYMOUS"."TBL_ALUNO" "TBL_ALUNO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TBL_CURSO" EntityType="Self.TBL_CURSO" store:Type="Tables" store:Schema="ANONYMOUS">
+      <DefiningQuery>SELECT 
+"TBL_CURSO"."ID" AS "ID", 
+"TBL_CURSO"."NOME" AS "NOME"
+FROM "ANONYMOUS"."TBL_CURSO" "TBL_CURSO"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

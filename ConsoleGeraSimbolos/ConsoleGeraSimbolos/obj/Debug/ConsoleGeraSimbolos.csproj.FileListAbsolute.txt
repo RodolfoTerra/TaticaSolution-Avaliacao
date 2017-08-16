@@ -1,0 +1,5 @@
+D:\xampp\htdocs\TaticaSolutions\ConsoleGeraSimbolos\ConsoleGeraSimbolos\bin\Debug\ConsoleGeraSimbolos.exe.config
+D:\xampp\htdocs\TaticaSolutions\ConsoleGeraSimbolos\ConsoleGeraSimbolos\bin\Debug\ConsoleGeraSimbolos.exe
+D:\xampp\htdocs\TaticaSolutions\ConsoleGeraSimbolos\ConsoleGeraSimbolos\bin\Debug\ConsoleGeraSimbolos.pdb
+D:\xampp\htdocs\TaticaSolutions\ConsoleGeraSimbolos\ConsoleGeraSimbolos\obj\Debug\ConsoleGeraSimbolos.exe
+D:\xampp\htdocs\TaticaSolutions\ConsoleGeraSimbolos\ConsoleGeraSimbolos\obj\Debug\ConsoleGeraSimbolos.pdb
